@@ -6,8 +6,10 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 10000;
 
-// Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://job-frontend-app.onrender.com"
+}));
+
 app.use(express.json());
 
 // PostgreSQL connection
