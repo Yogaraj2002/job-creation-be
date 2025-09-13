@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: job-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        fromGroup: job-backend
+      - key: DB_HOST
+        fromGroup: job-backend
+      - key: DB_USER
+        fromGroup: job-backend
+      - key: DB_PASSWORD
+        fromGroup: job-backend
+      - key: DB_NAME
+        fromGroup: job-backend
+      - key: DB_PORT
+        fromGroup: job-backend
